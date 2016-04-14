@@ -1,2 +1,11 @@
 ---
-# tasks file for lightdm
+- name: install lightdm
+  apt: name=lightdm state=present
+- name: install libglib2.0-bin
+  apt: name=libglib2.0-bin state=present
+- name: enable auto-login
+  template:
+    src: lightdm.conf
+    dest: "{{ lightdm_conf_directory }}/{{ lightdm_overide_filename }}"
+- name: apply glib schemas changes
+  command: "/usr/bin/glib-compile-schemas {{ lightdm_glib_schemas_directory }}"
