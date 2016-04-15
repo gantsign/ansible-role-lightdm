@@ -10,6 +10,6 @@ galaxy_info:
     - wily
   galaxy_tags:
     - lightdm
-    - auto-login
+    - autologin
     - xubuntu
 dependencies: []
