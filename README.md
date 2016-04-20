@@ -14,7 +14,8 @@ Ubuntu with LightDM installed.
 Role Variables
 --------------
 
-The following variables can be will change the behavior of this role (default values are shown below):
+The following variables will change the behavior of this role (default values
+are shown below):
 
 ```
 # Username of user to auto-login on startup
