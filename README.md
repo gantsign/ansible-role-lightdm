@@ -17,7 +17,7 @@ Role Variables
 The following variables will change the behavior of this role (default values
 are shown below):
 
-```
+```yaml
 # Username of user to auto-login on startup
 lightdm_autologin_user:
 
@@ -33,7 +33,6 @@ lightdm_conf_directory: /usr/share/lightdm/lightdm.conf.d
 
 # Name of override file for LightDM config
 lightdm_overide_filename: 70-ansible.conf
-
 ```
 
 Dependencies
@@ -46,7 +45,7 @@ Example Playbook
 
 This role can be used as follows:
 
-```
+```yaml
 - hosts: servers
   roles:
      - { role: gantsign.lightdm, lightdm_autologin_user: vagrant }
