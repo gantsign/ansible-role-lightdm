@@ -2,8 +2,11 @@
 language: python
 python: "2.7"
 
-# Use the new container infrastructure
-sudo: false
+# Require the standard build environment
+sudo: required
+
+# Require Ubuntu 14.04
+dist: trusty
 
 # Install ansible
 addons:
@@ -13,17 +16,27 @@ addons:
 
 install:
   # Install ansible
-  - pip install ansible
+  - sudo pip install ansible
 
   # Check ansible version
   - ansible --version
 
-  # Create ansible.cfg with correct roles_path
-  - printf '[defaults]\nroles_path=../' >ansible.cfg
+  # Update apt
+  - sudo apt-get update -qq
 
 script:
   # Basic role syntax check
   - ansible-playbook tests/test.yml -i tests/inventory --syntax-check
+
+  # Run the playbook with ansible-playbook
+  - sudo ansible-playbook tests/test.yml -i tests/inventory
+
+  # Check LightDM installed
+  - lightdm --version
+
+  # Check LightDM configured
+  - 'grep --color=never "test_usr" "/usr/share/lightdm/lightdm.conf.d/70-ansible.conf"'
+  - 'grep --color=never "4242" "/usr/share/lightdm/lightdm.conf.d/70-ansible.conf"'
 
 notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/
