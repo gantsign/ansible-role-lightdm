@@ -1,9 +1,13 @@
 ---
 - name: install lightdm
-  apt: name=lightdm state=present
+  apt:
+    name: lightdm
+    state: present
 
 - name: install libglib2.0-bin
-  apt: name=libglib2.0-bin state=present
+  apt:
+    name: libglib2.0-bin
+    state: present
 
 - name: enable auto-login
   template:
