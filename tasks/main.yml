@@ -11,7 +11,7 @@
 
 - name: enable auto-login
   template:
-    src: lightdm.conf
+    src: lightdm.conf.j2
     dest: "{{ lightdm_conf_directory }}/{{ lightdm_overide_filename }}"
 
 - name: apply glib schemas changes
