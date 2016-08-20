@@ -15,10 +15,12 @@
 *.html text
 *.xhtml text
 *.js text
+*.ts text
 *.css text
-*.prf text
-Vagrantfile text
-Customfile.example text
+*.less text
+*.scss text
+*.cfg text
+LICENSE text
 
 # Declare files that will always have CRLF line endings on checkout.
 *.bat text eol=crlf
@@ -36,3 +38,6 @@ Customfile.example text
 *.jpg binary
 *.jpeg binary
 *.gif binary
+*.eot binary
+*.tff binary
+*.woff binary
