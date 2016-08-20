@@ -1,4 +1,4 @@
-# Created by https://www.gitignore.io/api/windows,linux,osx,vim,emacs,intellij,eclipse,vagrant
+# Created by https://www.gitignore.io/api/windows,linux,osx,vim,emacs,intellij,eclipse,visualstudiocode,ansible
 
 ### Windows ###
 # Windows image file caches
@@ -35,7 +35,7 @@ $RECYCLE.BIN/
 
 
 ### OSX ###
-.DS_Store
+*.DS_Store
 .AppleDouble
 .LSOverride
 
@@ -53,6 +53,7 @@ Icon
 .TemporaryItems
 .Trashes
 .VolumeIcon.icns
+.com.apple.timemachine.donotpresent
 
 # Directories potentially created on remote AFP share
 .AppleDB
@@ -108,6 +109,7 @@ tramp
 
 # cask packages
 .cask/
+dist/
 
 # Flycheck
 flycheck_*.el
@@ -165,7 +167,12 @@ crashlytics-build.properties
 fabric.properties
 
 ### Intellij Patch ###
-*.iml
+# Comment Reason: https://github.com/joeblau/gitignore.io/issues/186#issuecomment-215987721
+
+# *.iml
+# modules.xml
+# .idea/misc.xml 
+# *.ipr
 
 
 ### Eclipse ###
@@ -222,11 +229,12 @@ local.properties
 .recommenders/
 
 
-### Vagrant ###
-.vagrant/
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
 
-# Ignore Vagrant customization file
-Customfile
 
-# Ignore files persisted between VM rebuilds
-/home
+### Ansible ###
+*.retry
