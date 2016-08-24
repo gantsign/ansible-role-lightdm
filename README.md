@@ -2,6 +2,7 @@ Ansible Role: LightDM
 =====================
 
 [![Build Status](https://travis-ci.org/gantsign/ansible-role-lightdm.svg?branch=master)](https://travis-ci.org/gantsign/ansible-role-lightdm)
+[![Ansible Galaxy](https://img.shields.io/badge/ansible--galaxy-gantsign.lightdm-blue.svg)](https://galaxy.ansible.com/gantsign/lightdm)
 
 Role to allow configuration of LightDM, currently limited to configuring the
 auto-login preferences.
