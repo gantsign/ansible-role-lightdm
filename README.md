@@ -52,6 +52,11 @@ This role can be used as follows:
      - { role: gantsign.lightdm, lightdm_autologin_user: vagrant }
 ```
 
+More roles from GantSign
+------------------------
+
+You can find more roles from GantSign on [Ansible Galaxy](https://galaxy.ansible.com/gantsign).
+
 Development & Testing
 ---------------------
 
