@@ -5,3 +5,5 @@
 autologin-user={{ lightdm_autologin_user }}
 autologin-user-timeout={{ lightdm_autologin_user_timeout }}
 {% endif %}
+
+greeter-allow-guest={{ lightdm_greeter_allow_guest | bool | ternary('true', 'false') }}
