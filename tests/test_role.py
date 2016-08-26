@@ -10,5 +10,17 @@ def test_config_file(File):
     assert conf.group == 'root'
     assert oct(conf.mode) == '0644'
 
-    assert conf.contains('test_usr')
-    assert conf.contains('4242')
+def test_auto_login(File):
+    conf = File('/usr/share/lightdm/lightdm.conf.d/70-ansible.conf')
+
+    assert conf.exists
+    assert conf.is_file
+    assert conf.contains('autologin-user=test_usr')
+    assert conf.contains('autologin-user-timeout=4242')
+
+def test_guest_login(File):
+    conf = File('/usr/share/lightdm/lightdm.conf.d/70-ansible.conf')
+
+    assert conf.exists
+    assert conf.is_file
+    assert conf.contains('greeter-allow-guest=true')

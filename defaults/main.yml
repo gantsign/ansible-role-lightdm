@@ -14,3 +14,6 @@ lightdm_autologin_user:
 # Time to wait (in seconds) before the user is auto logged in to allow a chance
 # to log in as a different user.
 lightdm_autologin_user_timeout: 0
+
+# Whether to allow users to login using the guest account
+lightdm_greeter_allow_guest: no

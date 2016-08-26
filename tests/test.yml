@@ -5,3 +5,4 @@
     - role: ansible-role-lightdm
       lightdm_autologin_user: test_usr
       lightdm_autologin_user_timeout: 4242
+      lightdm_greeter_allow_guest: yes

@@ -5,7 +5,7 @@ Ansible Role: LightDM
 [![Ansible Galaxy](https://img.shields.io/badge/ansible--galaxy-gantsign.lightdm-blue.svg)](https://galaxy.ansible.com/gantsign/lightdm)
 
 Role to allow configuration of LightDM, currently limited to configuring the
-auto-login preferences.
+auto-login preferences and whether to allow users to login using the guest account.
 
 Requirements
 ------------
@@ -25,6 +25,9 @@ lightdm_autologin_user:
 # Time to wait (in seconds) before the user is auto logged in to allow a chance
 # to log in as a different user.
 lightdm_autologin_user_timeout: 0
+
+# Whether to allow users to login using the guest account
+lightdm_greeter_allow_guest: no
 
 # Directory where GLib schemas are located
 lightdm_glib_schemas_directory: /usr/share/glib-2.0/schemas
