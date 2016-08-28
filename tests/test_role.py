@@ -1,3 +1,8 @@
+from testinfra.utils.ansible_runner import AnsibleRunner
+
+testinfra_hosts = AnsibleRunner('.molecule/ansible_inventory').get_hosts('all')
+
+
 def test_lightdm_installed(Command):
     assert Command('lightdm --version').rc == 0
 
