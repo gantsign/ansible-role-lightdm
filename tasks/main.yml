@@ -1,5 +1,5 @@
 ---
-- name: install dependencies
+- name: install dependencies (apt)
   become: yes
   apt:
     name: '{{ item }}'
@@ -7,6 +7,7 @@
   with_items:
     - lightdm
     - libglib2.0-bin
+  when: ansible_pkg_mgr == 'apt'
 
 - name: enable auto-login
   become: yes
