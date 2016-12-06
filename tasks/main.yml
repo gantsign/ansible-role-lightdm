@@ -15,7 +15,7 @@
   become: yes
   template:
     src: lightdm.conf.j2
-    dest: "{{ lightdm_conf_directory }}/{{ lightdm_overide_filename }}"
+    dest: '{{ lightdm_conf_directory }}/{{ lightdm_overide_filename }}'
     owner: root
     group: root
     mode: 'u=rw,go=r'
@@ -23,5 +23,5 @@
 
 - name: apply glib schemas changes
   become: yes
-  command: "/usr/bin/glib-compile-schemas {{ lightdm_glib_schemas_directory }}"
+  command: '/usr/bin/glib-compile-schemas {{ lightdm_glib_schemas_directory }}'
   when: lightdm_config.changed
