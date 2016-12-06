@@ -1,15 +1,12 @@
 ---
-- name: install lightdm
+- name: install dependencies
   become: yes
   apt:
-    name: lightdm
+    name: '{{ item }}'
     state: present
-
-- name: install libglib2.0-bin
-  become: yes
-  apt:
-    name: libglib2.0-bin
-    state: present
+  with_items:
+    - lightdm
+    - libglib2.0-bin
 
 - name: enable auto-login
   become: yes
