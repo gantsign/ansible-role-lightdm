@@ -1,2 +1,4 @@
 ---
-# handlers file for lightdm
+- name: compile glib schemas
+  become: yes
+  command: '/usr/bin/glib-compile-schemas {{ lightdm_glib_schemas_directory }}'
