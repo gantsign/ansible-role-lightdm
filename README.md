@@ -53,7 +53,8 @@ This role can be used as follows:
 ```yaml
 - hosts: servers
   roles:
-     - { role: gantsign.lightdm, lightdm_autologin_user: vagrant }
+    - role: gantsign.lightdm
+      lightdm_autologin_user: vagrant
 ```
 
 More Roles From GantSign
