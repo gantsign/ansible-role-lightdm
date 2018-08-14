@@ -1,5 +1,6 @@
 ---
 galaxy_info:
+  role_name: lightdm
   author: John Freeman
   description: Role for configuring LightDM.
   company: GantSign Ltd.
