@@ -11,7 +11,19 @@ auto-login preferences and whether to allow users to login using the guest accou
 Requirements
 ------------
 
-Ubuntu with LightDM installed.
+* LightDM installed
+
+* Ansible >= 2.3
+
+* Linux Distribution
+
+    * Debian Family
+
+        * Ubuntu
+
+            * Xenial (16.04)
+
+        * Note: other versions are likely to work but have not been tested.
 
 Role Variables
 --------------
