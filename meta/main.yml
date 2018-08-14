@@ -15,4 +15,5 @@ galaxy_info:
     - lightdm
     - autologin
     - xubuntu
+    - system
 dependencies: []
