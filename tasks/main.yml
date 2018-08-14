@@ -9,7 +9,7 @@
     - libglib2.0-bin
   when: ansible_pkg_mgr == 'apt'
 
-- name: enable auto-login
+- name: write LightDM configuration
   become: yes
   template:
     src: lightdm.conf.j2
