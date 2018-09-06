@@ -21,6 +21,7 @@ Requirements
 
         * Ubuntu
 
+            * Trusty (14.04)
             * Xenial (16.04)
 
         * Note: other versions are likely to work but have not been tested.
