@@ -18,10 +18,10 @@ matrix:
         - MOLECULEW_ANSIBLE=2.6.18
     - env:
         - MOLECULE_SCENARIO=no-login
-        - MOLECULEW_ANSIBLE=2.8.2
+        - MOLECULEW_ANSIBLE=2.9.1
     - env:
         - MOLECULE_SCENARIO=no-login
-        - MOLECULEW_ANSIBLE=2.8.2
+        - MOLECULEW_ANSIBLE=2.9.1
 
 # Require the standard build environment
 sudo: required
