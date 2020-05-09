@@ -8,7 +8,7 @@ env:
 
 # Spin off separate builds for each of the following versions
 # of Ansible and Linux.
-matrix:
+jobs:
   include:
     - env:
         - MOLECULE_SCENARIO=default
