@@ -13,7 +13,7 @@ Requirements
 
 * LightDM installed
 
-* Ansible >= 2.7
+* Ansible >= 2.8
 
 * Linux Distribution
 

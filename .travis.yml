@@ -12,10 +12,10 @@ jobs:
   include:
     - env:
         - MOLECULE_SCENARIO=default
-        - MOLECULEW_ANSIBLE=2.7.15
+        - MOLECULEW_ANSIBLE=2.8.16
     - env:
         - MOLECULE_SCENARIO=default
-        - MOLECULEW_ANSIBLE=2.7.15
+        - MOLECULEW_ANSIBLE=2.8.16
     - env:
         - MOLECULE_SCENARIO=no-login
         - MOLECULEW_ANSIBLE=2.9.1
