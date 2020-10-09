@@ -1,11 +1,3 @@
-import os
-
-import testinfra.utils.ansible_runner
-
-testinfra_hosts = testinfra.utils.ansible_runner.AnsibleRunner(
-    os.environ['MOLECULE_INVENTORY_FILE']).get_hosts('all')
-
-
 def test_lightdm_installed(host):
     assert host.run('lightdm --version').rc == 0
 
@@ -17,7 +9,7 @@ def test_config_file(host):
     assert conf.is_file
     assert conf.user == 'root'
     assert conf.group == 'root'
-    assert oct(conf.mode) == '0644'
+    assert oct(conf.mode) == '0o644'
 
 
 def test_auto_login(host):
